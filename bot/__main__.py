@@ -45,7 +45,7 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/SlamDevs/slam-mirrorbot")
+    buttons.buildbutton("Index", "https://gawr-index.floral.workers.dev/1:")
     buttons.buildbutton("Channel", "https://t.me/SlamMirrorUpdates")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
@@ -56,7 +56,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         sendMarkup(
-            'Oops! not a Authorized user.\nPlease deploy your own <b>slam-mirrorbot</b>.',
+            'Oops! you are not an authorized user.</b>.',
             context.bot,
             update,
             reply_markup,
@@ -154,9 +154,9 @@ help_string_telegraph = f'''<br>
 <b>/{BotCommands.StatsCommand}</b>: Show Stats of the machine the bot is hosted on
 '''
 help = Telegraph(access_token=telegraph_token).create_page(
-        title='Slam Mirrorbot Help',
-        author_name='Slam Mirrorbot',
-        author_url='https://github.com/SlamDevs/slam-mirrorbot',
+        title='Gawr Mirror 2 Help',
+        author_name='Gawr Mirror 2',
+        author_url='https://gawr.floral.workers.dev',
         html_content=help_string_telegraph,
     )["path"]
 
