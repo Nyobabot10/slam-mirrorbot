@@ -45,7 +45,7 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Group", "https://t.me/gawrmirror")
+    buttons.buildbutton("Group", "https://t.me/gawrmirror2")
     buttons.buildbutton("Channel", "https://t.me/gawrproject")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
@@ -56,7 +56,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         sendMarkup(
-            'Oops! This bot only works in gawr mirror group. Join the group to use this bot.',
+            'Oops! This bot only works in gawr mirror 2nd group. Join the group to use this bot.',
             context.bot,
             update,
             reply_markup,
@@ -155,8 +155,8 @@ help_string_telegraph = f'''<br>
 '''
 help = Telegraph(access_token=telegraph_token).create_page(
         title='Gawr Mirror Help',
-        author_name='Gawr Mirror',
-        author_url='https://t.me/gawrmirror',
+        author_name='Gawr Mirror 2',
+        author_url='https://t.me/gawrmirror2_bot',
         html_content=help_string_telegraph,
     )["path"]
 
