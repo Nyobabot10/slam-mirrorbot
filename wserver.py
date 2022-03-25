@@ -202,15 +202,15 @@ input[type="submit"]:hover, input[type="submit"]:focus{
     <header>
       <div class="brand">
         <img
-          src=""
+          src="https://telegra.ph/file/6ad697f1c5367c6523512.jpg"
           alt="logo"
         />
-        <a href="https://t.me/Gawrmirror2_bot"> 
-          <h2 class="name">gawr-mirror-2-bot</h2>
+        <a href="https://t.me/SlamMirrorUpdates"> 
+          <h2 class="name">Gawr Mirror Bot</h2>
         </a>
       </div>
       <div class="social">
-        <a href="https://github.com/kuro-creator"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/SlamDevs/slam-mirrorbot"><i class="fab fa-github"></i></a>
         <a href="https://t.me/Gawrmirror2_bot"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
@@ -331,7 +331,7 @@ code_page = """
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Torrent Code Checker</title>
-    <link rel="icon" href="https://telegra.ph/file/6507910fd06d18dfaba82.jpg" type="image/jpg"> 
+    <link rel="icon" href="https://telegra.ph/file/6ad697f1c5367c6523512.jpg" type="image/jpg"> 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -531,11 +531,11 @@ section span{
           alt="logo"
         />
         <a href="https://t.me/Gawrmirror2_bot">
-          <h2 class="name">gawr-mirror-2-bot</h2>
+          <h2 class="name">Gawr Mirror 2 Bot</h2>
         </a>
       </div>
       <div class="social">
-        <a href="https://github.com/kuro-creator"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/SlamDevs/slam-mirrorbot"><i class="fab fa-github"></i></a>
         <a href="https://t.me/Gawrmirror2_bot"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
@@ -705,7 +705,7 @@ async def set_priority(request):
 @routes.get('/')
 async def homepage(request):
 
-    return web.Response(text="<h1>See gawr-mirror-2-bot <a href='https://github.com/kuro-creator'>@GitHub</a> By <a href='https://github.com/kuro-creator'>kuro-creator</a></h1>", content_type="text/html")
+    return web.Response(text="<h1>See slam-mirrorbot <a href='https://github.com/SlamDevs/slam-mirrorbot'>@GitHub</a> By <a href='https://github.com/SlamDevs'>SlamDevs</a></h1>", content_type="text/html")
 
 
 async def e404_middleware(app, handler):
@@ -715,11 +715,11 @@ async def e404_middleware(app, handler):
         try:
             response = await handler(request)
             if response.status == 404:
-                return web.Response(text="<h1>404: Page not found</h2><br><h3>gawr-mirror-2-bot</h3>", content_type="text/html")
+                return web.Response(text="<h1>404: Page not found</h2><br><h3>slam-mirrorbot</h3>", content_type="text/html")
             return response
         except web.HTTPException as ex:
             if ex.status == 404:
-                return web.Response(text="<h1>404: Page not found</h2><br><h3>gawr-mirror-2-bot</h3>", content_type="text/html")
+                return web.Response(text="<h1>404: Page not found</h2><br><h3>slam-mirrorbot</h3>", content_type="text/html")
             raise
     return middleware_handler
 
